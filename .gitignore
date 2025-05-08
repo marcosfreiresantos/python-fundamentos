@@ -1,0 +1,26 @@
+# Ignora o ambiente virtual
+.venv/
+venv/
+
+# Ignora arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignora arquivos de log
+*.log
+
+# Ignora notebooks convertidos ou temporários
+.ipynb_checkpoints/
+
+# Ignora configurações do VS Code
+.vscode/
+
+# Ignora dependências externas em geral
+env/
+ENV/
+*.env
+
+# Ignora arquivos de sistema
+.DS_Store
+Thumbs.db
