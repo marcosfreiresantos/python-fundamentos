@@ -23,31 +23,39 @@ def divisao(num1, num2):
     return num1 / num2
 
 while True:
+    try:
+        opcao = int(input('Digite sua opção (1/2/3/4): '))
 
-    opcao = int(input('Digite sua opção (1/2/3/4): '))
+        if (opcao in [1, 2, 3, 4]):
+            break
 
-    if (opcao in [1, 2, 3, 4]):
+        print('Opção inválida, digite 1, 2, 3 ou 4')
+    except ValueError:
+        print('Por favor, digite um número válido!\n')
+        
+while True:
+    try:
+        num1 = float(input('Digite o primeiro valor: '))
+        num2 = float(input('Digite o segundo valor: '))
         break
-
-    print('Opção inválida, digite 1, 2, 3 ou 4')
-    print() 
-
-print()
-num1 = float(input('Digite o primeiro valor: '))
-num2 = float(input('Digite o segundo valor: '))
+    except ValueError:
+        print('Por favor, digite um número válido!\n')
 print()
 
-if (opcao == 1):
-    print(f'{num1} + {num2} = {soma(num1, num2)}')
+try:
+    if (opcao == 1):
+        print(f'{num1} + {num2} = {soma(num1, num2)}')
 
-elif (opcao == 2):
-    print(f'{num1} - {num2} = {subtracao(num1, num2)}')
+    elif (opcao == 2):
+        print(f'{num1} - {num2} = {subtracao(num1, num2)}')
 
-elif (opcao == 3):
-    print(f'{num1} * {num2} = {multiplicacao(num1, num2)}')
+    elif (opcao == 3):
+        print(f'{num1} * {num2} = {multiplicacao(num1, num2)}')
 
-else:
-    print(f'{num1} / {num2} = {divisao(num1, num2)}')
+    else:
+        print(f'{num1} / {num2} = {divisao(num1, num2)}')
+except ZeroDivisionError:
+    print('Erro: Não é possivel dividir por zero.')        
 
   
 
